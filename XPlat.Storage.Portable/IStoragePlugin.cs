@@ -25,8 +25,6 @@ namespace XPlat.Storage.Portable
         /// </summary>
         IStorageFolder CurrentDirectory { get; }
 
-        System.Threading.Tasks.Task<System.IO.Stream> OpenFileForRead(XPlat.Storage.IStorageFile file);
-
         System.Threading.Tasks.Task<XPlat.Storage.IStorageFile> GetFileFromPathAsync(string path);
 
         System.Threading.Tasks.Task<XPlat.Storage.IStorageFolder> GetFolderFromPath(string path);
