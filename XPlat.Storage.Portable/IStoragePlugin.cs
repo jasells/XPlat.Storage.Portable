@@ -15,6 +15,7 @@ namespace XPlat.Storage.Portable
         /// </summary>
         IStorageFolder VideoStorageFolder { get; }
 
+        //this can go away?  Use ApplicationData?
         /// <summary>
         /// returns the the current user's LocalAppData directory
         /// </summary>
@@ -28,5 +29,7 @@ namespace XPlat.Storage.Portable
         System.Threading.Tasks.Task<XPlat.Storage.IStorageFile> GetFileFromPathAsync(string path);
 
         System.Threading.Tasks.Task<XPlat.Storage.IStorageFolder> GetFolderFromPath(string path);
+
+
     }
 }

@@ -114,6 +114,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.7</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.0.0.446417</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\XPlat-Windows-APIs\XPlat.Storage.Common\XPlat.Storage.Common.csproj">

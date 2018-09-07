@@ -7,6 +7,6 @@ namespace XPlat.Storage.Portable
     public static class KnownFolders
     {
         public static IStorageFolder CurrentDirectory { get { return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().CurrentDirectory; } }
-        public static IStorageFolder LocalAppData { get { return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().LocalAppData; } }
+        public static IStorageFolder LocalAppData { get { return ApplicationData.Instance.LocalFolder; } }
     }
 }

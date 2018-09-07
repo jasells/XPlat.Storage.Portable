@@ -8,7 +8,7 @@ namespace XPlat.Storage.Portable
     {
         public static XPlat.Storage.Pickers.IFileOpenPicker CreatePicker(this IEnumerable<string> filters)
         {
-            var picker = Xamarin.Forms.DependencyService.Get<XPlat.Storage.Pickers.IFileOpenPicker>(Xamarin.Forms.DependencyFetchTarget.NewInstance);
+            var picker = FileOpenPicker.NewInstance;
 
             foreach (var f in filters)
                 picker.FileTypeFilter.Add(f);
