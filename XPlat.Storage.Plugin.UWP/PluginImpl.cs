@@ -13,7 +13,6 @@ using WinStorage = Windows.Storage;
 //register the FileOpenPicker
 [assembly: Xamarin.Forms.Dependency(typeof(XPlat.Storage.Pickers.FileOpenPicker))]
 
-
 [assembly: Xamarin.Forms.Dependency(typeof(XPlat.Storage.ApplicationData))]
 
 namespace XPlat.Storage.Plugin.UWP
