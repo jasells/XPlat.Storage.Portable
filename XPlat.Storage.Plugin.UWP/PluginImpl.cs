@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using XPlat.Storage.Pickers;
 using WinStorage = Windows.Storage;
 
 //register the plugin impl with Xamarin's IoC framework

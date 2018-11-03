@@ -15,14 +15,5 @@ namespace XPlat.Storage.Portable
                      .GetFileFromPathAsync(path);
 
         }
-
-        //public static System.Threading.Tasks.Task InitializeKnownFoldersAsync()
-        //{
-        //    return Xamarin.Forms.DependencyService.Get<XStreamer.Services.IFileOpener>()
-        //            .InitializeKnownFoldersAsync();
-        //}
-
-        public static XPlat.Storage.IStorageFolder VideoStorageFolder
-        { get { return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().VideoStorageFolder; } }
     }
 }
