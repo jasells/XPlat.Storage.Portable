@@ -117,16 +117,14 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>3.0.0.446417</Version>
     </PackageReference>
+    <PackageReference Include="XPlat.Storage">
+      <Version>1.4.18299.4</Version>
+    </PackageReference>
+    <PackageReference Include="XPlat.Storage.Pickers">
+      <Version>1.4.18299.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\XPlat-Windows-APIs\XPlat.Storage.Common\XPlat.Storage.Common.csproj">
-      <Project>{3f0a5ecc-70f4-4118-8ebd-e513764448b1}</Project>
-      <Name>XPlat.Storage.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XPlat-Windows-APIs\XPlat.Storage.UWP\XPlat.Storage.UWP.csproj">
-      <Project>{323e6055-ddaa-4a02-bd78-a60dc20f4abb}</Project>
-      <Name>XPlat.Storage.UWP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XPlat.Storage.Portable\XPlat.Storage.Portable.csproj">
       <Project>{cd311916-94fb-4f55-aefe-37fdae58df60}</Project>
       <Name>XPlat.Storage.Portable</Name>

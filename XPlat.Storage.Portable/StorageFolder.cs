@@ -9,8 +9,7 @@ namespace XPlat.Storage.Portable
     {
         public static System.Threading.Tasks.Task<XPlat.Storage.IStorageFolder> GetFolderFromPathAsync(string path)
         {
-            return Xamarin.Forms.DependencyService.Get<IStoragePlugin>()
-                        .GetFolderFromPath(path);
+            return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().GetFolderFromPath(path);
         }
     }
 }
