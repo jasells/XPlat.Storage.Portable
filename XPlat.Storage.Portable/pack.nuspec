@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>XPlat.Storage.Portable</id>
+    <title>XPlat.Storage.Portable</title>
+    <version>0.1.0</version>
+    <authors>jasells</authors>
+    <owners>jasells</owners>
+    <projectUrl>https://github.com/jasells/XPlat.Storage.Portable</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>provides Windows.Storage API to Xamarin.Forms</description>
+    <releaseNotes>pre-release limited support</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>storage file system</tags>
+
+    <dependencies>
+      <group>
+        <dependency id="XPlat.Storage" version="1.4.18299.4" />
+        <dependency id="XPlat.Storage.Pickers" version="1.4.18299.4" />
+        <dependency id="Xamarin.Forms" version="3.0.0.446417" />
+      </group>
+
+      <group targetFramework="monoandroid8.0">
+        <dependency id="XPlat.Storage" version="1.4.18299.4" />
+        <dependency id="XPlat.Storage.Pickers" version="1.4.18299.4" />
+        <dependency id="Xamarin.Forms" version="3.0.0.446417" />
+      </group>
+
+      <group targetFramework="uap">
+        <dependency id="XPlat.Storage" version="1.4.18299.4" />
+        <dependency id="XPlat.Storage.Pickers" version="1.4.18299.4" />
+        <dependency id="Xamarin.Forms" version="3.0.0.446417" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <!-- #region Cross-platform reference assemblies -->
+
+    <!-- This is for PCLs that may be targeting the root  libraries -->
+
+    <!-- These binaries require .NetStandard 1.4 -->
+    <file src="bin\$Configuration$\netstandard1.4\XPlat.Storage.Portable.dll" target="lib\netstandard1.4" />
+    <file src="bin\$Configuration$\netstandard1.4\XPlat.Storage.Portable.pdb" target="lib\netstandard1.4" />
+
+
+    <!-- #endregion Cross-platform reference assemblies -->
+
+    <!-- #region UWP reference assemblies -->
+
+    <file src="..\XPlat.Storage.Plugin.UWP\bin\$Configuration$\*.dll" target="lib\uap" />
+    <file src="..\XPlat.Storage.Plugin.UWP\bin\$Configuration$\*.dll" target="lib\uap\XPlat.Storage.Plugin.UWP" />
+    <file src="..\XPlat.Storage.Plugin.UWP\bin\$Configuration$\*.pri" target="lib\uap\XPlat.Storage.Plugin.UWP" />
+    <file src="..\XPlat.Storage.Plugin.UWP\bin\$Configuration$\*.pri" target="lib\uap" />
+
+    <!-- #endregion UWP reference assemblies -->
+
+    <!-- #region Android reference assemblies -->
+
+    <file src="..\XPlat.Storage.Plugin.Droid\bin\$Configuration$\*.dll" target="lib\monoandroid" />
+    <file src="..\XPlat.Storage.Plugin.Droid\bin\$Configuration$\*.dll" target="lib\monoandroid\XPlat.Storage.Plugin.Droid" />
+
+    <!-- #endregion Android reference assemblies -->
+  </files>
+</package>
