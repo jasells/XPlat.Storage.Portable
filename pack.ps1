@@ -7,4 +7,11 @@ param($configuration="Debug", $outputDir=".\")
 $nugetVersion = (Get-Item "XPlat.Storage.Portable\bin\$configuration\netstandard1.4\XPlat.Storage.Portable.dll").VersionInfo.ProductVersion
 
 # Run the pack command
-.\nuget pack "XPlat.Storage.Portable\pack.nuspec" -OutputDirectory $outputDir -Properties Configuration=$configuration -Symbols -Version $nugetVersion
+if($configuration.ToLower().Equals("debug"))
+{
+	.\nuget pack "XPlat.Storage.Portable\pack.nuspec" -OutputDirectory $outputDir -Properties Configuration=$configuration -Version $nugetVersion -Symbols -SymbolPackageFormat snupkg
+}
+else
+{
+	.\nuget pack "XPlat.Storage.Portable\pack.nuspec" -OutputDirectory $outputDir -Properties Configuration=$configuration -Version $nugetVersion
+}
