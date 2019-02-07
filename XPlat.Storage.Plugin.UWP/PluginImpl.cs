@@ -20,6 +20,8 @@ namespace XPlat.Storage.Plugin.UWP
 
         public IStorageFolder CurrentDirectory => current.Value;
 
+        public IStorageFolder Documents => docs.Value;
+
         public Task<IStorageFile> GetFileFromPathAsync(string path)
         {
             return XPlat.Storage.StorageFile.GetFileFromPathAsync(path);
@@ -31,6 +33,10 @@ namespace XPlat.Storage.Plugin.UWP
 
             return folder;
         }
+
+        private static readonly Lazy<XPlat.Storage.StorageFolder> docs =
+            new Lazy<XPlat.Storage.StorageFolder>(() => WinStorage.KnownFolders.DocumentsLibrary, System.Threading.LazyThreadSafetyMode.PublicationOnly);
+
 
         private static readonly Lazy<XPlat.Storage.StorageFolder> vid =
             new Lazy<XPlat.Storage.StorageFolder>(() => WinStorage.KnownFolders.VideosLibrary, System.Threading.LazyThreadSafetyMode.PublicationOnly);

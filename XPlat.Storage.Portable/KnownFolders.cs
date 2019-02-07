@@ -9,5 +9,7 @@ namespace XPlat.Storage.Portable
         public static IStorageFolder CurrentDirectory { get { return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().CurrentDirectory; } }
         public static IStorageFolder LocalAppData { get { return ApplicationData.Instance.LocalFolder; } }
         public static IStorageFolder VideosLibrary { get { return Xamarin.Forms.DependencyService.Get<IStoragePlugin>().VideoStorageFolder; } }
+
+        public static IStorageFolder Documents { get => Xamarin.Forms.DependencyService.Get<IStoragePlugin>().VideoStorageFolder; }
     }
 }

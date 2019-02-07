@@ -15,6 +15,11 @@ namespace XPlat.Storage.Portable
         /// </summary>
         IStorageFolder VideoStorageFolder { get; }
 
+        /// <summary>
+        /// on windows, returns current user's 'MyDocuments', other platforms: TBD
+        /// </summary>
+        IStorageFolder Documents { get; }
+
         //this can go away?  Use ApplicationData?
         /// <summary>
         /// returns the the current user's LocalAppData directory

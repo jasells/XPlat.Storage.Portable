@@ -19,12 +19,19 @@ namespace XPlat.Storage.Plugin.Droid
 
         public IStorageFolder CurrentDirectory => current.Value;
 
+        //**TODO: provide impl
+        public IStorageFolder Documents => throw new NotImplementedException();
+
         public Task<IStorageFile> GetFileFromPathAsync(string path) => XPlat.Storage.StorageFile.GetFileFromPathAsync(path);
 
         public async Task<IStorageFolder> GetFolderFromPath(string path)
         {
             return await StorageFolder.GetFolderFromPathAsync(path).ConfigureAwait(false);
         }
+
+        private static readonly Lazy<XPlat.Storage.IStorageFolder> docs =
+            new Lazy<XPlat.Storage.IStorageFolder>(() => XPlat.Storage.KnownFolders.DocumentsLibrary, System.Threading.LazyThreadSafetyMode.PublicationOnly);
+
 
         private static readonly Lazy<XPlat.Storage.IStorageFolder> vid =
             new Lazy<XPlat.Storage.IStorageFolder>(() => XPlat.Storage.KnownFolders.VideosLibrary, System.Threading.LazyThreadSafetyMode.PublicationOnly);
